@@ -1,7 +1,59 @@
+body {
+    background-image: url(../images/Mario-Background.jpg);
+    background-attachment: fixed;
+    background-position: 0px 0px; 
+}
+h1, h3 {
+    text-align:center;
+    font-family: 'Coda Caption', sans-serif;
+    border: solid 2px red;
+    background-color: white;
+    color: red;
+    border-radius: 10px;
+    padding:2px;
+    margin: 5px;
+}
 .findGifs {
     margin: 2px;
 }
 .display {
-    display: inline;
-    margin: 2px;
+    display: inline-block;
+    margin: 0px;
+}
+.container {
+    width: 980px;
+}
+.ratingText {
+    font-family: 'Coda Caption', sans-serif;
+    text-align: center;
+    margin-top:2px;
+}
+#gifArea {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: solid 2px white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+button, #newButton {
+    border: solid 2px red;
+    background-color: white;
+    color: red;
+    border-radius: 10px;
+    font-family: 'Coda Caption', sans-serif;
+    text-align: center;
+}
+button:hover, #newButton:hover {
+    color: white;
+    background-color: red;
+    border: solid 2px white;
+    cursor: url(../images/Retro-P-Wing.png), pointer;
+}
+#newButton {
+    margin-top: 5px;
+}
+sup {
+    font-size: 9px;
+}
+img {
+    margin-bottom: 5px;
 }
