@@ -34,7 +34,7 @@ var createButtons = function() {
         localStorage.setItem('topics',JSON.stringify(topics));
         //run the createButtons function
         createButtons();
-        $('#user-input').empty();
+        document.getElementById('user-input').value = ''
         console.log(this);
         }
     })
@@ -42,6 +42,7 @@ var createButtons = function() {
     //On click event to search GIPHY and display results below buttons
     $(document).on('click', '.findGifs', function() {
         $('#gifArea').empty();
+        
         var search = $(this).attr('data-value');
         //Query URL
         var xhr = "http://api.giphy.com/v1/gifs/search?q=" + search + "&api_key=FbiNAP9uph7PGhtFufRqkGRI1T9PU560&limit=10"
@@ -92,7 +93,8 @@ var createButtons = function() {
         //on click event tied to image class
         //this works for the first set of Gifs but when the area is cleared and new gifs appended,
         //it no longer works
-        $('#gifArea').on('click', '.start-stop', function() {
+        $('.start-stop').on('click', function() {
+            console.log('clicked');
             //variable calling out the current value of the data-state attribute
             var state = $(this).attr('data-state');
             //if attribute is 'still' then animate. if it is 'animate', then still

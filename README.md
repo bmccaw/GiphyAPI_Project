@@ -11,5 +11,5 @@ Working
 
 Not Working
 ==================
-- animate on click is inconsistent. it seems to work every other time I click the findGifs buttons.
-- search field does not clear on submit
+- ~~animate on click is inconsistent. it seems to work every other time I click the findGifs buttons.~~ fixed!
+- ~~search field does not clear on submit~~ fixed!
