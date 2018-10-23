@@ -33,28 +33,48 @@ let storedGifs = [];
         //Create new variables
         var rating = results[i].rating;
         var stillGif = results[i].images.fixed_height_still.url;
-        var gifDisplay = $('<div>');
+        var movingGif = results[i].images.fixed_height.url;
+       
+        var gifDisplay = $('<div data-state="still">');
         var gifImage = $('<img>');
         var p = $('<p>').text('Rating: ' + rating);
         gifDisplay.addClass('display');
         gifImage.attr('src', stillGif);
+        gifImage.attr ({'data-animate' : movingGif});
+        gifImage.attr ({'data-state' : "still"});
+        gifImage.attr ({'data-still' : stillGif});
         gifImage.addClass('start-stop');
         gifDisplay.prepend(p);
         gifDisplay.append(gifImage);
         $('#gifArea').prepend(gifDisplay);
         }
+
+        //this works for the first set of Gifs but when the area is cleared and new gifs appended,
+        //it no longer works
+        $(document).on('click', '.start-stop', function() {
+            var state = $(this).attr('data-state');
+
+            if (state === "still") {
+                $(this).attr('src', $(this).attr('data-animate'));
+                $(this).attr("data-state", "animate");
+            } else {
+                $(this).attr("src", $(this).attr("data-still"));
+                $(this).attr("data-state", "still");
+            }
+        })
+
+
     });
     });
     //add ability to click on the image and have it switch from still image to moving gif
     //start with on click function like above but targetting class added to images
-    $(document).on('click', '.start-stop', function() {
-        //create a variable to store the object path to the moving versions of the gif
-        var playGif = response.data.images.fixed_height.url;
-        //Change src attribute to variable 
-        $('.start-stop').attr('src', playGif);
-        //currently not recognizing variable. I think I need to make another ajax call to have access to the api data
-    });
+               
 
+
+        //create a variable to store the object path to the moving versions of the gif
+        //Change src attribute to variable 
+              
+          
 
 
 
