@@ -57,3 +57,6 @@ sup {
 img {
     margin-bottom: 5px;
 }
+img:hover {
+    cursor: url(../images/Retro-P-Wing.png), pointer;
+}

@@ -11,4 +11,5 @@ Working
 
 Not Working
 ==================
-- when gif button is pressed a second time, my click to animate function no longer works
+- animate on click is inconsistent. it seems to work every other time I click the findGifs buttons.
+- search field does not clear on submit
