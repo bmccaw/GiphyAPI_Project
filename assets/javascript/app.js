@@ -19,7 +19,8 @@ var createButtons = function() {
         $('#buttonArea').append(gifButton);
     }
 };
-    createButtons(); //need to be able to clear the field after submit
+    //$('#buttonArea').append(localStorage.getItem('topics',(topics))); //where to put the get request?
+    //createButtons(); 
     //this function allows new buttons to be added
     $(document).on('click', '#newButton', function() {
         event.preventDefault();

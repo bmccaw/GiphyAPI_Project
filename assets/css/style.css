@@ -1,7 +1,7 @@
 body {
     background-image: url(../images/Mario-Background.jpg);
     background-attachment: fixed;
-    background-position: 0px 0px; 
+    background-position: 0px -100px; 
 }
 h1, h3 {
     text-align:center;
@@ -55,7 +55,7 @@ sup {
     font-size: 9px;
 }
 img {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 img:hover {
     cursor: url(../images/Retro-P-Wing.png), pointer;
