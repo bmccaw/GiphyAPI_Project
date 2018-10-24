@@ -46,7 +46,7 @@ var createButtons = function() {
         
         var search = $(this).attr('data-value');
         //Query URL
-        var xhr = "http://api.giphy.com/v1/gifs/search?q=" + search + "&api_key=FbiNAP9uph7PGhtFufRqkGRI1T9PU560&limit=10"
+        var xhr = "https://api.giphy.com/v1/gifs/search?q=" + search + "&api_key=FbiNAP9uph7PGhtFufRqkGRI1T9PU560&limit=10"
         
         //ajax call to giphy
         $.ajax({
